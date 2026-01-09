@@ -1,6 +1,6 @@
 import YZ_Asistan from "./YZ_Asistan";
 
-export const metadat = {
+export const metadata = {
     title: 'Yapay Zeka Asistanı',
     description: 'Yapay zeka destekli beslenme asistanınızla tanışın.',
 }
