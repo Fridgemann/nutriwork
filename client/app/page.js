@@ -1,4 +1,8 @@
+'use client';
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header/Navigation */}
@@ -15,7 +19,7 @@ export default function Home() {
               <a href="#ozellikler" className="text-gray-700 hover:text-green-600 font-medium text-lg transition-colors">Özellikler</a>
               <a href="#nasil-calisir" className="text-gray-700 hover:text-green-600 font-medium text-lg transition-colors">Nasıl Çalışır</a>
               <a href="#hakkimizda" className="text-gray-700 hover:text-green-600 font-medium text-lg transition-colors">Hakkımızda</a>
-              <button className="bg-green-600 text-white px-6 py-2.5 rounded-lg hover:bg-green-700 font-medium text-lg transition-colors shadow-md">
+              <button onClick={() => router.push('/oneriler')} className="bg-green-600 text-white px-6 py-2.5 rounded-lg hover:bg-green-700 cursor-pointer font-medium text-lg transition-colors shadow-md">
                 Başlayın
               </button>
             </div>
@@ -34,8 +38,8 @@ export default function Home() {
               Nutriwork, hastalıklarınız ve beslenme kısıtlamalarınıza göre kişiselleştirilmiş öğün önerileri sunar. Yapay zeka destekli platformumuz ile güvenli ve dengeli beslenin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 font-semibold text-lg transition-colors shadow-lg">
-                Ücretsiz Başlayın
+              <button onClick={() => router.push('/oneriler')} className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 cursor-pointer font-semibold text-lg transition-colors shadow-lg">
+                Başlayın
               </button>
               <button className="bg-white border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg hover:bg-green-50 font-semibold text-lg transition-colors">
                 Daha Fazla Bilgi
@@ -93,6 +97,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/*Not Sure Section*/}
+        <section className="nutri-bg-section py-16 md:py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white bg-opacity-80 rounded-2xl shadow-xl p-8">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Hangi Beslenme Kısıtlamaları Size Uygun?</h2>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+              Beslenme kısıtlamalarınızdan emin değil misiniz? Nutriwork'ün rehberliğinde, sağlığınıza en uygun beslenme planını keşfedin. Uzman önerileri ve yapay zeka destekli analizlerle, kendiniz için en iyi seçenekleri bulun.
+            </p>
+            <button onClick={() => router.push('/yz-asistan')} className="bg-green-600 text-white px-10 py-4 rounded-lg hover:bg-green-700 font-bold text-xl transition-colors shadow-xl">
+              Rehberliği Başlatın
+            </button>
+          </div>
+        </section>
 
       {/* Features Section */}
       <section id="ozellikler" className="py-16 md:py-20 bg-gradient-to-b from-white to-green-50">
@@ -170,7 +187,7 @@ export default function Home() {
           <p className="text-xl text-green-50 mb-8">
             Ücretsiz hesap oluşturun ve kişiselleştirilmiş beslenme önerilerinize hemen erişin.
           </p>
-          <button className="bg-white text-green-600 px-10 py-4 rounded-lg hover:bg-green-50 font-bold text-xl transition-colors shadow-xl">
+          <button onClick={() => router.push('/oneriler')} className="bg-white text-green-600 px-10 py-4 rounded-lg hover:bg-green-50 font-bold text-xl transition-colors shadow-xl">
             Çok Yakında!
           </button>
         </div>
