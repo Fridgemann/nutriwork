@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
     res.sendStatus(200);
 });
 
+const recipesRouter = require("./routes/recipes");
+app.use("/api/recipes", recipesRouter);
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

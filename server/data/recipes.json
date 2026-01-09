@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Zeytinyağlı Sebzeli Tavuk Sote",
+    "ingredients": [
+      "Tavuk göğsü",
+      "Kabak",
+      "Biber",
+      "Brokoli",
+      "Zeytinyağı",
+      "Sarımsak",
+      "Limon suyu"
+    ],
+    "allergens": [
+      "Tavuk",
+      "Sarımsak (hassas mide için dikkat)"
+    ],
+    "suitableFor": [
+      "Diyabet",
+      "Kalp damar hastalıkları",
+      "Hipertansiyon",
+      "Laktoz intoleransı",
+      "Çölyak"
+    ],
+    "notSuitableFor": [
+      "Tavuk alerjisi",
+      "Çok hassas mide (sarımsak azaltılabilir)"
+    ],
+    "diabetesReason": [
+      "Düşük glisemik indeksli sebzeler içerir",
+      "Rafine karbonhidrat ve ilave şeker içermez",
+      "Yüksek protein sayesinde kan şekerini dengeler",
+      "Sağlıklı yağ kaynağı olarak zeytinyağı kullanılır"
+    ],
+    "portionNote": "1 avuç içi kadar tavuk + bol sebze önerilir. Ekmek eklenmemelidir."
+  }
+]
