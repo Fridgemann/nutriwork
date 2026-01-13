@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function YZ_Asistan() {
     const API = process.env.NEXT_PUBLIC_API_URL + '/recipes';
     const [recipes, setRecipes] = useState([]);
     const [current, setCurrent] = useState(0);
+    const [showNotification, setShowNotification] = useState(false);
 
     useEffect(() => {
         fetch(API)
@@ -34,11 +36,18 @@ export default function YZ_Asistan() {
     };
     const imageUrl = recipe.image || imageMap[recipe.name] || "/default-food.jpg";
 
-    const handleLike = () => setCurrent((prev) => (prev + 1) % recipes.length);
+    const handleLike = () => {
+        setCurrent((prev) => (prev + 1) % recipes.length);
+        setShowNotification(true);
+        setTimeout(() => setShowNotification(false), 2000);
+    };
     const handleDislike = () => setCurrent((prev) => (prev + 1) % recipes.length);
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-green-50 to-white py-12">
+            <div className="fixed top-10 right-10 z-50 bg-green-500 p-2 rounded">
+                <Link href="/gecmis">Tariflerim'e git</Link>
+            </div>
             <div className="max-w-3xl mx-auto px-4">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold text-gray-900 mb-2">YZ <span className="text-green-600">Beslenme Asistanı</span></h1>
@@ -128,6 +137,17 @@ export default function YZ_Asistan() {
                 <div className="text-center mt-6 text-gray-600">
                     Tarif <span className="font-bold text-green-600">{current + 1}</span> / {recipes.length}
                 </div>
+                {/* Notification Toast */}
+                {showNotification && (
+                    <div className="fixed top-8 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg animate-fade-in-down z-50">
+                        <div className="flex items-center gap-2">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="font-semibold">Tarfilerim'e kaydedildi!</span>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
