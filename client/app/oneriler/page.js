@@ -1,7 +1,7 @@
 import Oneriler from "./Oneriler";
 
 export const metadata = {
-    title: 'Öneriler',
+    title: 'Öneriler - Nutriwork',
     description: 'Kendinize uygun besinleri keşfedin.',
 };
 

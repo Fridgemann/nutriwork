@@ -24,7 +24,13 @@ export default function YZ_Asistan() {
     const recipe = recipes[current];
     // If you have only one recipe, or want to map image by name:
     const imageMap = {
-        "Zeytinyağlı Sebzeli Tavuk Sote": "/zeytinyag_sebzeli_tavuk_sote.jpeg"
+        "Zeytinyağlı Sebzeli Tavuk Sote": "/zeytinyag_sebzeli_tavuk_sote.jpeg",
+        "Zeytinyağlı Kabak Yemeği": "/yemek-2.jpeg",
+        "Izgara Hindi Göğsü": "/yemek-3.jpeg",
+        "Kinoa ve Sebzeli Salata": "/yemek-4.jpeg",
+        "Sebzeli Pirinç Lapası": "/yemek-5.jpeg",
+        "Fırında Tavuk ve Patates": "/yemek-6.jpeg",
+        "Chia Puding (Laktozsuz)": "/yemek-7.jpeg",
     };
     const imageUrl = recipe.image || imageMap[recipe.name] || "/default-food.jpg";
 
@@ -36,7 +42,7 @@ export default function YZ_Asistan() {
             <div className="max-w-3xl mx-auto px-4">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold text-gray-900 mb-2">YZ <span className="text-green-600">Beslenme Asistanı</span></h1>
-                    <p className="text-lg text-gray-600">Size uygun tarifleri keşfedin - beğenin ya da geçin</p>
+                    <p className="text-lg text-gray-600">Asistanınıza size neyin uygun olduğunu seçin!</p>
                 </div>
                 <div className="flex items-center justify-center gap-6">
                     {/* Dislike Button */}
@@ -96,16 +102,16 @@ export default function YZ_Asistan() {
                                 <span className="font-semibold text-gray-700">Porsiyon Notu:</span>
                                 <div className="text-gray-700">{recipe.portionNote}</div>
                             </div>
-                            {recipe.diabetesReason && (
-                                <div className="mb-2">
-                                    <span className="font-semibold text-gray-700">Diyabet için neden uygun?</span>
+                            {recipe.diseaseReasons && Object.entries(recipe.diseaseReasons).map(([disease, reasons]) => (
+                                <div key={disease} className="mb-2">
+                                    <span className="font-semibold text-gray-700">{disease} için neden uygun?</span>
                                     <ul className="list-disc list-inside text-blue-700">
-                                        {recipe.diabetesReason.map((r, i) => (
+                                        {reasons.map((r, i) => (
                                             <li key={i}>{r}</li>
                                         ))}
                                     </ul>
                                 </div>
-                            )}
+                            ))}
                         </div>
                     </div>
                     {/* Like Button */}

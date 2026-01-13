@@ -25,12 +25,167 @@
       "Tavuk alerjisi",
       "Çok hassas mide (sarımsak azaltılabilir)"
     ],
-    "diabetesReason": [
-      "Düşük glisemik indeksli sebzeler içerir",
-      "Rafine karbonhidrat ve ilave şeker içermez",
-      "Yüksek protein sayesinde kan şekerini dengeler",
-      "Sağlıklı yağ kaynağı olarak zeytinyağı kullanılır"
-    ],
+    "diseaseReasons": {
+      "Diyabet": [
+        "Düşük glisemik indeksli sebzeler içerir",
+        "Rafine karbonhidrat ve ilave şeker içermez",
+        "Yüksek protein sayesinde kan şekerini dengeler",
+        "Sağlıklı yağ kaynağı olarak zeytinyağı kullanılır"
+      ]
+    },
     "portionNote": "1 avuç içi kadar tavuk + bol sebze önerilir. Ekmek eklenmemelidir."
+  },
+  {
+    "name": "Zeytinyağlı Kabak Yemeği",
+    "ingredients": [
+      "Kabak",
+      "Soğan",
+      "Zeytinyağı",
+      "Dereotu"
+    ],
+    "allergens": [],
+    "suitableFor": [
+      "Hipertansiyon",
+      "Diyabet",
+      "Kalp damar hastalıkları",
+      "Çölyak",
+      "Laktoz intoleransı",
+      "Mide hassasiyeti"
+    ],
+    "notSuitableFor": [],
+    "diseaseReasons": {
+      "Hipertansiyon": [
+        "Düşük sodyum içerir",
+        "Hafif ve sindirimi kolaydır"
+      ]
+    },
+    "portionNote": "1 orta tabak idealdir."
+  },
+  {
+    "name": "Izgara Hindi Göğsü",
+    "ingredients": [
+      "Hindi göğsü",
+      "Zeytinyağı",
+      "Baharatlar"
+    ],
+    "allergens": [
+      "Hindi"
+    ],
+    "suitableFor": [
+      "Diyabet",
+      "Kalp damar hastalıkları",
+      "Hipertansiyon",
+      "Çölyak",
+      "Laktoz intoleransı"
+    ],
+    "notSuitableFor": [
+      "Hindi alerjisi"
+    ],
+    "diseaseReasons": {
+      "Diyabet": [
+        "Yüksek protein içerir",
+        "Kan şekerini dengeler"
+      ]
+    },
+    "portionNote": "1 avuç içi kadar hindi yeterlidir."
+  },
+  {
+    "name": "Kinoa ve Sebzeli Salata",
+    "ingredients": [
+      "Kinoa",
+      "Salatalık",
+      "Domates",
+      "Zeytinyağı"
+    ],
+    "allergens": [],
+    "suitableFor": [
+      "Çölyak",
+      "Diyabet",
+      "Kalp damar hastalıkları",
+      "Laktoz intoleransı"
+    ],
+    "notSuitableFor": [
+      "Kinoa hassasiyeti"
+    ],
+    "diseaseReasons": {
+      "Çölyak": [
+        "Doğal olarak glutensizdir",
+        "Bitkisel protein içerir"
+      ]
+    },
+    "portionNote": "1 kase yeterlidir."
+  },
+  {
+    "name": "Sebzeli Pirinç Lapası",
+    "ingredients": [
+      "Beyaz pirinç",
+      "Havuç",
+      "Kabak",
+      "Su"
+    ],
+    "allergens": [],
+    "suitableFor": [
+      "Mide hassasiyeti",
+      "Laktoz intoleransı",
+      "Hipertansiyon"
+    ],
+    "notSuitableFor": [
+      "Diyabet (porsiyon kontrolü gerekir)"
+    ],
+    "diseaseReasons": {
+      "Mide hassasiyeti": [
+        "Yağsızdır",
+        "Sindirimi kolaydır"
+      ]
+    },
+    "portionNote": "Küçük kase önerilir."
+  },
+  {
+    "name": "Chia Puding (Laktozsuz)",
+    "ingredients": [
+      "Chia tohumu",
+      "Badem sütü"
+    ],
+    "allergens": [
+      "Kuruyemiş"
+    ],
+    "suitableFor": [
+      "Laktoz intoleransı",
+      "Kalp damar hastalıkları"
+    ],
+    "notSuitableFor": [
+      "Kuruyemiş alerjisi"
+    ],
+    "diseaseReasons": {
+      "Laktoz intoleransı": [
+        "Süt ürünü içermez"
+      ]
+    },
+    "portionNote": "Küçük kase yeterlidir."
+  },
+  {
+    "name": "Fırında Tavuk ve Patates",
+    "ingredients": [
+      "Tavuk",
+      "Patates",
+      "Zeytinyağı"
+    ],
+    "allergens": [
+      "Tavuk"
+    ],
+    "suitableFor": [
+      "Kalp damar hastalıkları",
+      "Çölyak",
+      "Laktoz intoleransı"
+    ],
+    "notSuitableFor": [
+      "Diyabet (patates miktarı sınırlandırılmalı)"
+    ],
+    "diseaseReasons": {
+      "Genel Sağlık": [
+        "Dengeli protein ve karbonhidrat içerir"
+      ]
+    },
+    "portionNote": "Az patates, bol tavuk önerilir."
   }
 ]
